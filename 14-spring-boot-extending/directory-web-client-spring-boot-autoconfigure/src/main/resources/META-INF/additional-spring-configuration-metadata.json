@@ -1,0 +1,13 @@
+{"properties": [{
+  "name": "directory.web.client.username",
+  "type": "java.lang.String",
+  "description": "Directory Web Administrator username."
+},{
+  "name": "directory.web.client.uri",
+  "type": "java.lang.String",
+  "description": "Directory URI."
+},
+  {
+    "name": "directory.web.client.password",
+    "type": "java.lang.String",
+    "description": "Directory Administrator password."}]}

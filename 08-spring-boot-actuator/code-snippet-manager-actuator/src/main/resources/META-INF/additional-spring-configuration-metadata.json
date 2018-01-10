@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "snippet.path",
+  "type": "java.lang.String",
+  "description": "Path where all the snippets will be saved."
+}]}

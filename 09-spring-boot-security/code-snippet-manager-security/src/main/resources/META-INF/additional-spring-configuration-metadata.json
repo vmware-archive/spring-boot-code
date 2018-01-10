@@ -1,0 +1,18 @@
+{"properties": [{
+  "name": "snippet.path",
+  "type": "java.lang.String",
+  "description": "Path where all the snippets will be saved."
+},{
+  "name": "snippet.authentication-uri",
+  "type": "java.lang.String",
+  "description": "Directory URI."
+},
+  {
+    "name": "snippet.authentication-username",
+    "type": "java.lang.String",
+    "description": "Directory Admin username"
+  },
+  {
+    "name": "snippet.authentication-password",
+    "type": "java.lang.String",
+    "description": "Directory Admin password."}]}

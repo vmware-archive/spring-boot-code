@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'io.pivotal.workshop'
+version = '1.0-SNAPSHOT'
+
+description = """simple-spring-webapp Maven Webapp"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.springframework', name: 'spring-webmvc', version:'5.0.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version:'5.0.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-aop', version:'5.0.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version:'5.0.1.RELEASE'
+
+    compile group: 'org.thymeleaf', name: 'thymeleaf', version:'3.0.9.RELEASE'
+    compile group: 'org.thymeleaf', name: 'thymeleaf-spring5', version:'3.0.9.RELEASE'
+
+    compile group: 'org.slf4j', name: 'slf4j-api', version:'1.7.25'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version:'1.2.3'
+
+    providedCompile group: 'javax.servlet', name: 'servlet-api', version:'3.1.0'
+}

@@ -1,0 +1,8 @@
+{"properties": [{
+  "name": "snippet.path",
+  "type": "java.lang.String",
+  "description": "Path where all the snippets will be saved. By default this is set to /tmp."
+},{
+  "name": "snippet.extension",
+  "type": "java.lang.String",
+  "description": "The file extension. By default is set to *.code."}]}

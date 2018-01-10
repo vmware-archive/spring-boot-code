@@ -1,0 +1,9 @@
+{"properties": [{
+  "name": "directory.audit",
+  "type": "java.lang.String",
+  "description": "Directory Audit, use the @Audit annotation over methods, possible values: on, off"
+},{
+  "name": "directory.info",
+  "type": "java.lang.String",
+  "description": "Directory Audit, print out information about paramters and result. Possible values: short, long (default)"
+}]}

@@ -1,0 +1,8 @@
+title: Hello World
+description: A JavaScript Hello World
+lang: {
+  name: JavaScript,
+  syntax: js
+  }
+code: |
+    console.log("Hello World");
