@@ -1,0 +1,21 @@
+rootProject.name = 'spring-boot-workshop-labs'
+
+include '01-spring-framework:simple-spring-webapp'
+include '02-spring-boot-overview:directory-web'
+include '03-spring-boot-internals:directory-web-internals'
+include '04-spring-boot-features:directory-web-features'
+include '05-spring-boot-web:code-snippet-manager'
+include '06-spring-boot-data:code-snippet-manager-jdbc'
+include '06-spring-boot-data:code-snippet-manager-jpa'
+include '06-spring-boot-data:code-snippet-manager-jpa-rest'
+include '07-spring-boot-test:code-snippet-manager-jpa-rest-test'
+include '08-spring-boot-actuator:code-snippet-manager-actuator'
+include '09-spring-boot-security:code-snippet-manager-security'
+include '09-spring-boot-security:directory-web-security'
+include '10-spring-boot-messaging:code-snippet-manager-amqp'
+include '10-spring-boot-messaging:snippet-amqp-client'
+include '11-spring-boot-webflux:code-snippet-manager-flux'
+include '12-spring-boot-cloud-stream:code-snippet-manager-stream'
+include '12-spring-boot-cloud-stream:code-snippet-manager-stream-log'
+
+

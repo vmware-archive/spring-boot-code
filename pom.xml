@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.pivotal.workshop</groupId>
+    <artifactId>spring-boot-workshop-labs</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>spring-boot-workshop-labs</name>
+
+    <modules>
+        <module>01-spring-framework/simple-spring-webapp</module>
+        <module>02-spring-boot-overview/directory-web</module>
+        <module>03-spring-boot-internals/directory-web-internals</module>
+        <module>04-spring-boot-features/directory-web-features</module>
+        <module>05-spring-boot-web/code-snippet-manager</module>
+        <module>06-spring-boot-data/code-snippet-manager-jdbc</module>
+        <module>06-spring-boot-data/code-snippet-manager-jpa</module>
+        <module>06-spring-boot-data/code-snippet-manager-jpa-rest</module>
+        <module>07-spring-boot-test/code-snippet-manager-jpa-rest-test</module>
+		<module>08-spring-boot-actuator/code-snippet-manager-actuator</module>
+        <module>09-spring-boot-security/code-snippet-manager-security</module>
+        <module>09-spring-boot-security/directory-web-security</module>
+        <module>10-spring-boot-messaging/code-snippet-manager-amqp</module>
+        <module>10-spring-boot-messaging/snippet-amqp-client</module>
+		<module>11-spring-boot-webflux/code-snippet-manager-flux</module>
+		<module>12-spring-boot-cloud-stream/code-snippet-manager-stream</module>
+		<module>12-spring-boot-cloud-stream/code-snippet-manager-stream-log</module>
+        <module>14-spring-boot-extending/demo-starter</module>
+        <module>14-spring-boot-extending/directory-web-client-spring-boot-autoconfigure</module>
+        <module>14-spring-boot-extending/directory-web-client-spring-boot-starter</module>
+    </modules>
+</project>

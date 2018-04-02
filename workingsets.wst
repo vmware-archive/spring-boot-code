@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSets>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1518665121658_1" label="01-spring-web" name="01-spring-web">
+<item elementID="=simple-spring-webapp" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1518665195453_3" label="02-spring-boot" name="02-spring-boot">
+<item elementID="=directory-web" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1518665220024_4" label="03-internals" name="03-internals">
+<item elementID="=directory-web-internals" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1518665260794_5" label="04-features" name="04-features">
+<item elementID="=directory-web-features" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1518665284534_6" label="05-web" name="05-web">
+<item elementID="=code-snippet-manager" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1518665309451_7" label="06-data" name="06-data">
+<item elementID="=code-snippet-manager-jpa-rest" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=code-snippet-manager-jdbc" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=code-snippet-manager-jpa" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1518665333436_8" label="07-actuator" name="07-actuator">
+<item elementID="=code-snippet-manager-actuator" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1518665365071_9" label="08-security" name="08-security">
+<item elementID="=directory-web-security" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=code-snippet-manager-security" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1518665397303_10" label="09-webflux" name="09-webflux">
+<item elementID="=code-snippet-manager-flux" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1518665406270_11" label="10-microservices" name="10-microservices"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1518665557371_12" label="11-extending" name="11-extending">
+<item elementID="=directory-web-client-spring-boot-autoconfigure" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=demo-starter" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=directory-web-client-spring-boot-starter" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/directory-web-client" type="4"/>
+</workingSet>
+</workingSets>
