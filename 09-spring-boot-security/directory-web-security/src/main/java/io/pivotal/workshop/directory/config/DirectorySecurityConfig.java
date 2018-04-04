@@ -1,12 +1,13 @@
 package io.pivotal.workshop.directory.config;
 
-import io.pivotal.workshop.directory.security.DirectoryUserDetailsService;
-import org.springframework.boot.actuate.autoconfigure.security.EndpointRequest;
-import org.springframework.boot.autoconfigure.security.StaticResourceRequest;
+import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;
+import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+import io.pivotal.workshop.directory.security.DirectoryUserDetailsService;
 
 
 
@@ -31,7 +32,7 @@ public class DirectorySecurityConfig extends WebSecurityConfigurerAdapter{
                 .hasRole("ACTUATOR")
 
 
-                .requestMatchers(StaticResourceRequest.toCommonLocations())
+                .requestMatchers(PathRequest.toStaticResources().atCommonLocations())
                 .permitAll()
 
                 .antMatchers("/api/**").hasRole("ADMIN")
@@ -57,11 +58,14 @@ public class DirectorySecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
+    	//Should be used outside
+        PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        String password = encoder.encode("workshop");
+
         return new InMemoryUserDetailsManager(
                 User
-                        .withDefaultPasswordEncoder()
-                        .username("springboot")
-                        .password("workshop")
+                        .withUsername("springboot")
+                        .password(password)
                         .roles("USER")
                         .build());
     }

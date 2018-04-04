@@ -1,4 +1,4 @@
-package io.pivotal.workshop;
+package demo;
 
 import io.pivotal.workshop.directory.annotation.Algorithm;
 import io.pivotal.workshop.directory.annotation.EnableDirectoryWebClientUtils;

@@ -1,18 +1,17 @@
 package io.pivotal.workshop.snippet.config;
 
-import io.pivotal.workshop.snippet.domain.Person;
+import java.net.URI;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.actuate.autoconfigure.security.EndpointRequest;
-import org.springframework.boot.autoconfigure.security.StaticResourceRequest;
+import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;
+import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.hateoas.Resource;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
@@ -23,11 +22,12 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.net.URI;
-import java.util.Collections;
+import io.pivotal.workshop.snippet.domain.Person;
 
 @EnableConfigurationProperties(SnippetProperties.class)
 @Configuration
@@ -54,7 +54,7 @@ public class SnippetSecurityConfig extends WebSecurityConfigurerAdapter {
                 .hasRole("ACTUATOR")
 
 
-                .requestMatchers(StaticResourceRequest.toCommonLocations())
+                .requestMatchers(PathRequest.toStaticResources().atCommonLocations())
                 .permitAll()
 
                 .antMatchers("/api/**").hasRole("ADMIN")
@@ -88,7 +88,12 @@ public class SnippetSecurityConfig extends WebSecurityConfigurerAdapter {
 
                         Resource<Person> resource = responseEntity.getBody();
                         Person person = resource.getContent();
-                        return User.withDefaultPasswordEncoder().username(person.getEmail()).password(person.getPassword()).roles(person.getRole()).build();
+
+                        //This should be used outside.
+                        PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+                        String password = encoder.encode(person.getPassword());
+
+                        return User.withUsername(person.getEmail()).password(password).roles(person.getRole()).build();
                     }
 
                 }catch(Exception ex) {
