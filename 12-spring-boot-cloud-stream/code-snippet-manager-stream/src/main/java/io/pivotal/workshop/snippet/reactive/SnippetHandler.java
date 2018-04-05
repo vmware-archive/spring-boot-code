@@ -1,23 +1,19 @@
 package io.pivotal.workshop.snippet.reactive;
 
-import io.pivotal.workshop.snippet.domain.Language;
-import io.pivotal.workshop.snippet.domain.Snippet;
-import io.pivotal.workshop.snippet.repository.LanguageRepository;
-import io.pivotal.workshop.snippet.repository.SnippetRepository;
-import io.pivotal.workshop.snippet.service.SnippetService;
-import org.springframework.beans.factory.annotation.Autowired;
+import static org.springframework.web.reactive.function.server.ServerResponse.notFound;
+import static org.springframework.web.reactive.function.server.ServerResponse.ok;
+
+import java.util.Optional;
+
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
-import reactor.core.publisher.EmitterProcessor;
+
+import io.pivotal.workshop.snippet.domain.Snippet;
+import io.pivotal.workshop.snippet.service.SnippetService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.util.Optional;
-
-import static org.springframework.web.reactive.function.server.ServerResponse.notFound;
-import static org.springframework.web.reactive.function.server.ServerResponse.ok;
 
 @Component
 public class SnippetHandler {

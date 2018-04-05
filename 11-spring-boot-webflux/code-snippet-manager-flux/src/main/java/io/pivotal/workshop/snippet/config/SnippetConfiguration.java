@@ -1,21 +1,10 @@
 package io.pivotal.workshop.snippet.config;
 
-import com.mongodb.MongoClient;
-import io.pivotal.workshop.snippet.domain.Language;
-import io.pivotal.workshop.snippet.domain.Snippet;
-import io.pivotal.workshop.snippet.repository.LanguageRepository;
-import io.pivotal.workshop.snippet.repository.SnippetRepository;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.DependsOn;
-import org.springframework.core.env.Environment;
-
-import java.util.Arrays;
 
 @Configuration
 public class SnippetConfiguration {
-	
+
     /*
 	@Bean
 	public CommandLineRunner runner(LanguageRepository languageRepository, SnippetRepository snippetRepository) {

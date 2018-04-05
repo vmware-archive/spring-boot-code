@@ -35,7 +35,8 @@ public class SnippetReactiveConfig {
                 .andRoute(POST("/snippets").and(accept(APPLICATION_JSON)),handler::createSnippet);
     }
 
-    @Bean
+    @SuppressWarnings("rawtypes")
+	@Bean
     public EmitterProcessor snippetStream(){                                   ////<3>
         return EmitterProcessor.<Snippet>create();
     }

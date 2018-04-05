@@ -10,13 +10,16 @@ import reactor.core.publisher.Flux;
 @RestController
 public class SnippetController {
 
-    private EmitterProcessor snippetStream;
+    @SuppressWarnings("rawtypes")
+	private EmitterProcessor snippetStream;
 
-    public SnippetController(EmitterProcessor snippetStream) {  ////<1>
+    @SuppressWarnings("rawtypes")
+	public SnippetController(EmitterProcessor snippetStream) {  ////<1>
         this.snippetStream = snippetStream;
     }
 
-    @GetMapping(path = "/logs", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    @SuppressWarnings("unchecked")
+	@GetMapping(path = "/logs", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Snippet> snippetLog(){                          ////<2>
         return snippetStream.doOnSubscribe(subscription -> { snippetStream.next().subscribe(); });
 

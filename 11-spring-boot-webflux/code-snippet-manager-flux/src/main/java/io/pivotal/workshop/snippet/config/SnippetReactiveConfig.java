@@ -1,19 +1,22 @@
 package io.pivotal.workshop.snippet.config;
 
 
-import io.pivotal.workshop.snippet.domain.Snippet;
-import io.pivotal.workshop.snippet.reactive.SnippetHandler;
+import static org.springframework.http.MediaType.APPLICATION_JSON;
+import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
+import static org.springframework.web.reactive.function.server.RequestPredicates.POST;
+import static org.springframework.web.reactive.function.server.RequestPredicates.accept;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
+
+import io.pivotal.workshop.snippet.domain.Snippet;
+import io.pivotal.workshop.snippet.reactive.SnippetHandler;
 import reactor.core.publisher.EmitterProcessor;
 import reactor.ipc.netty.http.server.HttpServer;
-
-import static org.springframework.http.MediaType.APPLICATION_JSON;
-import static org.springframework.web.reactive.function.server.RequestPredicates.*;
 
 
 @Configuration
@@ -35,7 +38,8 @@ public class SnippetReactiveConfig {
                 .andRoute(POST("/snippets").and(accept(APPLICATION_JSON)),handler::createSnippet);
     }
 
-    @Bean
+    @SuppressWarnings("rawtypes")
+	@Bean
     public EmitterProcessor snippetStream(){                                   ////<3>
         return EmitterProcessor.<Snippet>create();
     }

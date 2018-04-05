@@ -6,16 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.boot.CommandLineRunner;
-//import org.springframework.boot.actuate.metrics.CounterService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.handler.MappedInterceptor;
 
 import io.pivotal.workshop.snippet.domain.Code;
 import io.pivotal.workshop.snippet.domain.Language;
 import io.pivotal.workshop.snippet.domain.Snippet;
 import io.pivotal.workshop.snippet.repository.SnippetRepository;
-  
+
 @Configuration
 public class SnippetConfiguration {
 
